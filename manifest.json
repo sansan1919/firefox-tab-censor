@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Tab Title Censor",
+  "version": "1.0.0",
+  "description": "Hide tab titles for better privacy while browsing.",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "browser_action": {
+    "default_title": "Tab Title Censor",
+    "default_popup": "popup.html",
+    "default_icon": "assets/focusicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
